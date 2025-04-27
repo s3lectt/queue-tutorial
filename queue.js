@@ -1,39 +1,39 @@
 export class Queue {
 
-    constructor () {
+    constructor() {
         this.items = [];
     }
 
-    enqueue (item) {
+    enqueue(item) {
 
-        this.items.push (item);
+        this.items.push(item);
 
         return item;
     }
 
-    dequeue () {
-        if (this.isEmpty ()) throw new Error ('The queue is empty!');
+    dequeue() {
+        if (this.isEmpty ()) throw new Error('The queue is empty!');
 
-        return this.items.shift ();
+        return this.items.shift();
     }
 
-    getFirst () {
+    getFirst() {
 
-        if (this.isEmpty ()) throw new Error ('The queue is empty!');
+        if (this.isEmpty ()) throw new Error('The queue is empty!');
 
         return this.items[0];
 
     }
 
-    isEmpty () {
+    isEmpty() {
         return this.items.length === 0;
     }
 
-    size () {
+    size() {
         return this.items.length;
     }
 
-    clear () {
+    clear() {
         this.items = [];
     }
 
